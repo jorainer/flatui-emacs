@@ -3,7 +3,7 @@
 ;; Copyright (C) 2016- Johannes Rainer
 
 ;; Author: Johannes Rainer <johannes.rainer@gmail.com>
-;; Version: 0.0.1
+;; Version: 0.1.0
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -151,35 +151,6 @@ Alpha should be a float between 0 and 1."
 ;;; The colors from flatui (come always in lighter, darker shade):
 ;; To compare colors etc see http://designmodo.github.io/Flat-UI/ and
 ;; http://ethanschoonover.com/solarized
-;; turquoise #1abc9c
-;; green sea #16a085
-;;
-;; emerald #2ecc71
-;; nephritis #27ae60
-;;
-;; peter river #3498db
-;; belize hole #2980b9
-;;
-;; amethyst #9b59b6
-;; wisteria #8e44ad
-;;
-;; wet asphalt #34495e
-;; midnight blue #2c3e50
-;;
-;; sun flower #f1c40f
-;; orange #f39c12
-;;
-;; carrot #e67e22
-;; pumpkin #d35400
-;;
-;; alizarin #e74c3c
-;; pomegranate #c0392b
-;;
-;; clouds #ecf0f1
-;; silver #bdc3c7
-;;
-;; concrete #95a5a6
-;; asbestos #7f8c8d
 
 ;;; Setup Start
 (defmacro flatui-with-color-variables (variant &rest body)
@@ -200,6 +171,9 @@ Alpha should be a float between 0 and 1."
           ;;
           (wetasphalt   "#34495e")
           (midnightblue "#2c3e50")
+          ;; Even darker colors. For use as background in dark mode.
+          (duster       "#273747")
+          (zappenduster "#1e2b38")
           ;;
           (sunflower    "#f1c40f")
           (orange       "#f39c12")
@@ -275,15 +249,15 @@ Alpha should be a float between 0 and 1."
           ;;      base0, base00, base01 and base1 are content tones.
           ;; base0: foreground, base03: background
           ;; main foreground
-          (base0 (if (eq variant 'light) wetasphalt silver))
-          (base00 (if (eq variant 'light) s-base0 s-base00))
-          (base1 (if (eq variant 'light) s-base01 s-base1))
-          (base01 (if (eq variant 'light) s-base1 s-base01))
-          (base2 (if (eq variant 'light) s-base02 s-base2))
-          (base02 (if (eq variant 'light) s-base2 s-base02))
-          (base3 (if (eq variant 'light) s-base03 s-base3))
+          (base0 (if (eq variant 'light) midnightblue silver))
+          (base00 (if (eq variant 'light) clouds midnightblue))
+          (base1 (if (eq variant 'light) asbestos concrete))
+          (base01 (if (eq variant 'light) concrete asbestos))
+          (base2 (if (eq variant 'light) wetasphalt silver))
+          (base02 (if (eq variant 'light) silver wetasphalt))
+          (base3 (if (eq variant 'light) midnightblue clouds))
           ;; main background
-          (base03 (if (eq variant 'light) clouds midnightblue))
+          (base03 (if (eq variant 'light) clouds duster))
           ;; (base0 (if (eq variant 'light) s-base00 s-base0))
           ;; (base00 (if (eq variant 'light) s-base0 s-base00))
           ;; (base1 (if (eq variant 'light) s-base01 s-base1))

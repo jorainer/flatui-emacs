@@ -13,10 +13,10 @@ and bbatsov.
 + [ ] adgfkdg
 + [X] asfdasdf.
 
-*** Second 
+*** Second
 
 **** Third.
-     
+
 ***** Fourth.
 
 ****** Fifth.
@@ -27,5 +27,10 @@ and bbatsov.
     CLOSED: [2016-02-04 Thu 12:38]
     - State "DONE"       from "TODO"       [2016-02-04 Thu 12:38]
 
-*** TODO Check some more coloring.
+*** DONE Check some more coloring.
+    CLOSED: [2016-02-05 Fri 09:19]
 
+    - State "DONE"       from "TODO"       [2016-02-05 Fri 09:19]
+*** DONE Fix the dark background color; doesn't seem dark enough.
+    CLOSED: [2016-02-05 Fri 09:34]
+    - State "DONE"       from "TODO"       [2016-02-05 Fri 09:34]
