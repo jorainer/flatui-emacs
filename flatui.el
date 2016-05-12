@@ -1701,6 +1701,7 @@ customize the resulting theme."
                                 `(org-footnote ((,class (:foreground ,magenta :underline t))))
                                 `(org-latex-and-export-specials ((,class (:foreground ,orange))))
                                 `(org-mode-line-clock-overrun ((,class (:inherit mode-line :background ,red))))
+                                `(org-verbatim ((,class (:foreground ,blue))))
 ;;;;; outline
                                 `(outline-1 ((,class (:inherit org-level-1 :height ,flatui-height-plus-4))))
                                 `(outline-2 ((,class (:inherit org-level-2 :height ,flatui-height-plus-3))))
