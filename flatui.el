@@ -3,7 +3,7 @@
 ;; Copyright (C) 2016- Johannes Rainer
 
 ;; Author: Johannes Rainer <johannes.rainer@gmail.com>
-;; Version: 0.1.0
+;; Version: 0.1.1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -44,6 +44,12 @@
   "Flatui theme options.
 The theme has to be reloaded after changing anything in this group."
   :group 'faces)
+
+(defcustom flatui-high-contrast-code-block-header nil
+  "Use a high contrast background color for source code blocks."
+  :type 'boolean
+  :group 'flatui
+  )
 
 (defcustom flatui-distinct-fringe-background nil
   "Make the fringe background different from the normal background color.
@@ -304,6 +310,14 @@ Alpha should be a float between 0 and 1."
                            base02 base03))
           (s-fringe-fg base01)
 
+          (s-source-block-header-fg (if flatui-high-contrast-code-block-header
+                                        base03 base01))
+
+          (s-source-block-header-bg (if flatui-high-contrast-code-block-header
+                                        base01 base03))
+
+          (s-source-block-header-line (if flatui-high-contrast-code-block-header
+                                          nil base01))
 
           (s-header-line-fg (if flatui-high-contrast-mode-line
                                 base1 base0))
@@ -1635,8 +1649,16 @@ customize the resulting theme."
                                 `(org-block ((,class (:foreground ,base01))))
                                 ;; `(org-block-begin-line ((,class (:underline ,s-line :foreground ,base01 :slant italic))))
                                 ;; `(org-block-end-line ((,class (:overline ,s-line :foreground ,base01 :slant italic))))
-                                `(org-block-begin-line ((,class (:foreground ,base03 :slant italic :background ,base01))))
-                                `(org-block-end-line ((,class (:foreground ,base03 :slant italic :background ,base01))))
+                                ;; `(org-block-begin-line ((,class (:foreground ,base03 :slant italic :background ,base01))))
+                                ;; `(org-block-end-line ((,class (:foreground ,base03 :slant italic :background ,base01))))
+                                `(org-block-begin-line ((,class (:foreground ,s-source-block-header-fg
+                                                                             :slant italic
+                                                                             :background ,s-source-block-header-bg
+                                                                             :underline ,s-source-block-header-line))))
+                                `(org-block-end-line ((,class (:foreground ,s-source-block-header-fg
+                                                                           :slant italic
+                                                                           :background ,s-source-block-header-bg
+                                                                           :overline ,s-source-block-header-line))))
                                 `(org-checkbox ((,class (:background ,base03 :foreground ,base0
                                                                      :box (:line-width 1 :style released-button)))))
                                 `(org-code ((,class (:foreground ,base01))))
