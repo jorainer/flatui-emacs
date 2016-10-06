@@ -1107,7 +1107,7 @@ customize the resulting theme."
                                 `(helm-selection-line ((,class (:background ,base02 :foreground ,base1
                                                                             :underline nil))))
                                 `(helm-separator ((,class (:foreground ,red))))
-                                `(helm-source-header ((,class (:background ,blue-lc :foreground ,base03
+                                `(helm-source-header ((,class (:background ,base0 :foreground ,base00
                                                                            :underline nil))))
                                 `(helm-time-zone-current ((,class (:foreground ,green))))
                                 `(helm-time-zone-home ((,class (:foreground ,red))))
