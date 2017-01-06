@@ -3,7 +3,7 @@
 ;; Copyright (C) 2016- Johannes Rainer
 
 ;; Author: Johannes Rainer <johannes.rainer@gmail.com>
-;; Version: 0.1.1
+;; Version: 0.1.2
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,11 +20,13 @@
 
 ;;; Commentary:
 ;;
-;; A port of Flatui to Emacs.
+;; A port of Flatui to Emacs. Colors base on:
+;; o https://flatuicolors.com/
+;; o http://www.flatuicolorpicker.com/category/all
 ;;
 ;;; Installation:
 ;;
-;;   Drop the `flatui-theme.el` somewhere in your `load-path` and
+;; Drop the `flatui-theme.el` somewhere in your `load-path` and
 ;; the two themes in a folder that is on `custom-theme-load-path'
 ;; and enjoy!
 ;;
@@ -195,8 +197,13 @@ Alpha should be a float between 0 and 1."
           ;;
           (concrete     "#95a5a6")
           (asbestos     "#7f8c8d")
+          ;; new dark blue
+          (ebony-clay   "#22313f")
           ;;
           (magenta      "#d33682")
+          ;; new nice magenta
+          (razzmatazz   "#db0a5b")
+          (cabaret      "#d2527f")
           ;; dark blue and slightly brighter.
           (s-base03    midnightblue)
           (s-base02    wetasphalt)
@@ -224,7 +231,7 @@ Alpha should be a float between 0 and 1."
           (yellow (if (eq variant 'light) orange sunflower))
           (orange (if (eq variant 'light) pumpkin carrot))
           (red (if (eq variant 'light) pomegranate alizarin))
-          (magenta (if (eq variant 'light) magenta magenta))
+          (magenta (if (eq variant 'light) razzmatazz cabaret))
           (violet (if (eq variant 'light) wisteria amethyst))
           (blue (if (eq variant 'light) belizehole peterriver))
           (cyan (if (eq variant 'light) greensea turquoise))
@@ -263,7 +270,8 @@ Alpha should be a float between 0 and 1."
           (base02 (if (eq variant 'light) silver wetasphalt))
           (base3 (if (eq variant 'light) midnightblue clouds))
           ;; main background
-          (base03 (if (eq variant 'light) clouds duster))
+          ;; (base03 (if (eq variant 'light) clouds duster))
+          (base03 (if (eq variant 'light) clouds ebony-clay))
           ;; (base0 (if (eq variant 'light) s-base00 s-base0))
           ;; (base00 (if (eq variant 'light) s-base0 s-base00))
           ;; (base1 (if (eq variant 'light) s-base01 s-base1))
