@@ -165,36 +165,44 @@ Alpha should be a float between 0 and 1."
   (declare (indent 0))
   `(let* ((class '((class color) (min-colors 89)))
           (variant ,variant)
+          ;; color pairs are dark - light
+          ;; turquoise
           (turquoise    "#1abc9c")
           (greensea     "#16a085")
-          ;;
+          ;; turqouise 2
+          (car-green    "#03C9A9")
+          (mount-meadow "#1BBC9B")
+          ;; greens
           (emerald      "#2ecc71")
           (nephritis    "#27ae60")
-          ;;
+          ;; greens 2
+          (jade         "#00B16A")
+          (salem        "#1E824C")
+          ;; blues
           (peterriver   "#3498db")
           (belizehole   "#2980b9")
-          ;;
+          ;; purple
           (amethyst     "#9b59b6")
           (wisteria     "#8e44ad")
-          ;;
+          ;; dark
           (wetasphalt   "#34495e")
           (midnightblue "#2c3e50")
           ;; Even darker colors. For use as background in dark mode.
           (duster       "#273747")
           (zappenduster "#1e2b38")
-          ;;
+          ;; yellow
           (sunflower    "#f1c40f")
           (orange       "#f39c12")
-          ;;
+          ;; orange
           (carrot       "#e67e22")
           (pumpkin      "#d35400")
-          ;;
+          ;; red
           (alizarin     "#e74c3c")
           (pomegranate  "#c0392b")
-          ;;
+          ;; light grey
           (clouds       "#ecf0f1")
           (silver       "#bdc3c7")
-          ;;
+          ;; dark grey
           (concrete     "#95a5a6")
           (asbestos     "#7f8c8d")
           ;; new dark blue
@@ -235,7 +243,8 @@ Alpha should be a float between 0 and 1."
           (violet (if (eq variant 'light) wisteria amethyst))
           (blue (if (eq variant 'light) belizehole peterriver))
           (cyan (if (eq variant 'light) greensea turquoise))
-          (green (if (eq variant 'light) nephritis emerald))
+          ;;(green (if (eq variant 'light) nephritis emerald))
+          (green (if (eq variant 'light) salem jade))
 
           ;; Darker and lighter accented colors
           ;; Only use these in exceptional circumstances!
@@ -253,8 +262,10 @@ Alpha should be a float between 0 and 1."
           (blue-l     peterriver)
           (cyan-d     greensea)
           (cyan-l     turquoise)
-          (green-d    nephritis)
-          (green-l    emerald)
+          ;; (green-d    nephritis)
+          ;; (green-l    emerald)
+          (green-d    salem)
+          (green-l    jade)
 
           ;; Flatui palette names, use these instead of -fg -bg...
           ;; Note: base03 and base02 are background tones for dark.
