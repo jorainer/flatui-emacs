@@ -1777,9 +1777,12 @@ customize the resulting theme."
                                 `(pophint:match-face ((,class (:background ,blue :foreground ,base03))))
                                 `(pophint:pos-tip-face ((,class (:background ,base02 :foreground ,base0))))
 ;;;;; powerline
+                                ;; `(powerline-active1 ((,class ,(if flatui-high-contrast-mode-line
+                                ;;                                   `(:background ,base00 :foreground ,base03)
+                                ;;                                 `(:background ,base03 :foreground ,base00)))))
                                 `(powerline-active1 ((,class ,(if flatui-high-contrast-mode-line
-                                                                  `(:background ,base00 :foreground ,base03)
-                                                                `(:background ,base03 :foreground ,base00)))))
+                                                                  `(:background ,blue-hc :foreground ,base03)
+                                                                `(:background ,blue-lc :foreground ,base00)))))
                                 `(powerline-active2 ((,class ,(if flatui-high-contrast-mode-line
                                                                   `(:background ,base01 :foreground ,base03)
                                                                 `(:background ,base02 :foreground ,base00)))))
