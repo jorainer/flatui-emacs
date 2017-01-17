@@ -175,6 +175,8 @@ Alpha should be a float between 0 and 1."
           ;; turquoise 3
           (niagara1     "#2ABB9B")
           (observatory  "#049372")
+          ;; lighter alternative for observatory
+          (niagara      "#16a085")
           ;; greens
           (emerald      "#2ecc71")
           (nephritis    "#27ae60")
@@ -247,7 +249,8 @@ Alpha should be a float between 0 and 1."
           (blue (if (eq variant 'light) belizehole peterriver))
           ;; (cyan (if (eq variant 'light) greensea turquoise))
           ;; (cyan (if (eq variant 'light) mount-meadow car-green))
-          (cyan (if (eq variant 'light) observatory niagara1))
+          ;; (cyan (if (eq variant 'light) observatory niagara1))
+          (cyan (if (eq variant 'light) niagara niagara1))
           ;;(green (if (eq variant 'light) nephritis emerald))
           (green (if (eq variant 'light) salem jade))
 
