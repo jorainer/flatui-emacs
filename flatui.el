@@ -192,9 +192,6 @@ Alpha should be a float between 0 and 1."
           ;; dark
           (wetasphalt   "#34495e")
           (midnightblue "#2c3e50")
-          ;; Even darker colors. For use as background in dark mode.
-          (duster       "#273747")
-          (zappenduster "#1e2b38")
           ;; yellow
           (sunflower    "#f1c40f")
           (orange       "#f39c12")
@@ -210,8 +207,13 @@ Alpha should be a float between 0 and 1."
           ;; dark grey
           (concrete     "#95a5a6")
           (asbestos     "#7f8c8d")
-          ;; new dark blue
+          ;; Potential background colors for dark mode:
+          (duster       "#273747")
+          (zappenduster "#1e2b38")
           (ebony-clay   "#22313f")
+          (outer-space  "#2e3131")
+          (shark        "#24252a")
+          (madison      "#2c3e50")
           ;;
           (magenta      "#d33682")
           ;; new nice magenta
@@ -282,23 +284,16 @@ Alpha should be a float between 0 and 1."
           ;; base0: foreground, base03: background
           ;; main foreground
           (base0 (if (eq variant 'light) midnightblue silver))
+          ;; (base0 (if (eq variant 'light) shark silver))
           (base00 (if (eq variant 'light) clouds midnightblue))
           (base1 (if (eq variant 'light) asbestos concrete))
           (base01 (if (eq variant 'light) concrete asbestos))
           (base2 (if (eq variant 'light) wetasphalt silver))
-          (base02 (if (eq variant 'light) silver wetasphalt))
+          ;; (base02 (if (eq variant 'light) silver wetasphalt))
+          (base02 (if (eq variant 'light) silver madison))
           (base3 (if (eq variant 'light) midnightblue clouds))
           ;; main background
-          ;; (base03 (if (eq variant 'light) clouds duster))
-          (base03 (if (eq variant 'light) clouds ebony-clay))
-          ;; (base0 (if (eq variant 'light) s-base00 s-base0))
-          ;; (base00 (if (eq variant 'light) s-base0 s-base00))
-          ;; (base1 (if (eq variant 'light) s-base01 s-base1))
-          ;; (base01 (if (eq variant 'light) s-base1 s-base01))
-          ;; (base2 (if (eq variant 'light) s-base02 s-base2))
-          ;; (base02 (if (eq variant 'light) s-base2 s-base02))
-          ;; (base3 (if (eq variant 'light) s-base03 s-base3))
-          ;; (base03 (if (eq variant 'light) s-base3 s-base03))
+          (base03 (if (eq variant 'light) clouds shark))
 
           ;; Line drawing color
           ;;
