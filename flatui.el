@@ -204,6 +204,8 @@ Alpha should be a float between 0 and 1."
           ;; light grey
           (clouds       "#ecf0f1")
           (silver       "#bdc3c7")
+          (carrara      "#f2f1ef")
+          (pampas       "#f3f1ef")
           ;; dark grey
           (concrete     "#95a5a6")
           (asbestos     "#7f8c8d")
@@ -293,7 +295,8 @@ Alpha should be a float between 0 and 1."
           (base02 (if (eq variant 'light) silver madison))
           (base3 (if (eq variant 'light) midnightblue clouds))
           ;; main background
-          (base03 (if (eq variant 'light) clouds shark))
+          ;; (base03 (if (eq variant 'light) clouds shark))
+          (base03 (if (eq variant 'light) pampas shark))
 
           ;; Line drawing color
           ;;

@@ -8,29 +8,3 @@ Flatui for Emacs is a theme based on the colors from [[http://designmodo.github.
 [[https://github.com/bbatsov/solarized-emacs][solarized-emacs]] theme. Thus, all credit should go to the developers of flat UI
 and bbatsov.
 
-** Orgtest [1/2] 						   :noexport:
-
-+ [ ] adgfkdg
-+ [X] asfdasdf.
-
-*** Second
-
-**** Third.
-
-***** Fourth.
-
-****** Fifth.
-
-** TODOs							   :noexport:
-
-*** DONE Rename all solarized stuff into flatui.
-    CLOSED: [2016-02-04 Thu 12:38]
-    - State "DONE"       from "TODO"       [2016-02-04 Thu 12:38]
-
-*** DONE Check some more coloring.
-    CLOSED: [2016-02-05 Fri 09:19]
-
-    - State "DONE"       from "TODO"       [2016-02-05 Fri 09:19]
-*** DONE Fix the dark background color; doesn't seem dark enough.
-    CLOSED: [2016-02-05 Fri 09:34]
-    - State "DONE"       from "TODO"       [2016-02-05 Fri 09:34]
